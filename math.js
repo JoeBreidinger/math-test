@@ -27,4 +27,18 @@ export function subtract(num1, num2) {
  * @returns {number} the index of the minimum value in `numbers`
  * @returns {number} -1 if `numbers` is empty
  */
-export function findMinIndex(numbers) {}
+export function findMinIndex(numbers) {
+  let minIndex = -1;
+  let minValue = Infinity;
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] < minValue) {
+      minIndex = i;
+      minValue = numbers[i];
+    }
+  }
+  return minIndex;
+}
+
+// if (numbers.length === 0) {
+//   return -1;
+// }
